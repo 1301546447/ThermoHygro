@@ -1,0 +1,22 @@
+// 统一 WPF 与 WinForms 混用时的类型歧义（本项目两者同时启用：WPF 做界面、WinForms 做屏幕枚举与托盘）。
+global using ComboBox = System.Windows.Controls.ComboBox;
+global using TextBox = System.Windows.Controls.TextBox;
+global using TextBlock = System.Windows.Controls.TextBlock;
+global using Brush = System.Windows.Media.Brush;
+global using Brushes = System.Windows.Media.Brushes;
+global using Color = System.Windows.Media.Color;
+global using ColorConverter = System.Windows.Media.ColorConverter;
+global using Point = System.Windows.Point;
+global using Size = System.Windows.Size;
+global using Rect = System.Windows.Rect;
+global using Application = System.Windows.Application;
+global using Path = System.IO.Path;
+global using StreamWriter = System.IO.StreamWriter;
+global using FileStream = System.IO.FileStream;
+global using FileInfo = System.IO.FileInfo;
+global using Directory = System.IO.Directory;
+global using File = System.IO.File;
+global using ApplicationBase = System.Windows.Application;
+global using Window = System.Windows.Window;
+global using MessageBox = System.Windows.MessageBox;
+global using Clipboard = System.Windows.Clipboard;

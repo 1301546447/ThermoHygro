@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- 需要 System.Windows.Forms.Screen 处理多显示器与工作区定位 -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ThermoHygro.App</RootNamespace>
+    <AssemblyName>ThermoHygro</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>ThermoHygro.App.Program</StartupObject>
+    <!--
+      高 DPI：WPF 主体依靠 app.manifest 的 dpiAwareness=PerMonitorV2 实现多屏不同缩放；
+      WPF 不提供 SetHighDpiMode API，因此不能按 WFO0003 建议移除 manifest 声明。
+      该警告来自 WinForms 分析器（本项目仅少量使用 WinForms 做屏幕枚举与托盘），
+      属于已知误报，按分析器文档给出的许可方式显式抑制。
+    -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThermoHygro.Core\ThermoHygro.Core.csproj" />
+    <ProjectReference Include="..\ThermoHygro.Protocols\ThermoHygro.Protocols.csproj" />
+    <ProjectReference Include="..\ThermoHygro.Infrastructure\ThermoHygro.Infrastructure.csproj" />
+    <ProjectReference Include="..\ThermoHygro.Reporting\ThermoHygro.Reporting.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="10.0.12" />
+  </ItemGroup>
+</Project>

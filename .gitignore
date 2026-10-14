@@ -1,0 +1,48 @@
+# 构建产物与运行数据
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+publish/
+.claude/
+*.log
+*.tmp
+*.bak
+
+# 数据库与 WAL/SHM（严禁提交）
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# 凭据与本地配置
+config.json
+appsettings*.json
+*.cred
+
+# 报表/导出/备份
+Exports/
+Backups/
+*.csv
+*.pdf
+
+# 验证与临时产物
+artifacts/
+.probe/
+selfcheck/
+docs/来源文件指纹.json
+docs/01-开发计划.md
+docs/02-现有功能与协议依据.md
+docs/03-验收与交付清单.md
+docs/04-交给开发agent的任务书.md
+docs/开发台账.md
+TestResults/
+
+# 解密副本
+*.decrypted
+*_decrypted.*

@@ -1,0 +1,26 @@
+<Window x:Class="ThermoHygro.App.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="悬浮读数"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" Topmost="True" ShowActivated="False"
+        Focusable="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        WindowStartupLocation="Manual">
+  <Border x:Name="RootBorder" CornerRadius="10" Padding="18,12" Background="#CC101418">
+    <StackPanel>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <TextBlock x:Name="TempText" FontWeight="SemiBold" Foreground="#E53935"
+                   FontFamily="Microsoft YaHei UI, Consolas" VerticalAlignment="Center"/>
+        <TextBlock x:Name="SepText" Text="   " FontSize="18" VerticalAlignment="Center"/>
+        <TextBlock x:Name="HumText" FontWeight="SemiBold" Foreground="#1E88E5"
+                   FontFamily="Microsoft YaHei UI, Consolas" VerticalAlignment="Center"/>
+      </StackPanel>
+      <TextBlock x:Name="StatusText" FontSize="12" Foreground="#CCFFFFFF"
+                 HorizontalAlignment="Center" Margin="0,4,0,0"
+                 FontFamily="Microsoft YaHei UI"/>
+      <TextBlock x:Name="DeviceText" FontSize="11" Foreground="#99FFFFFF"
+                 HorizontalAlignment="Center" Margin="0,2,0,0"
+                 FontFamily="Microsoft YaHei UI"/>
+    </StackPanel>
+  </Border>
+</Window>
